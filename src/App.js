@@ -1,27 +1,32 @@
-import React, { Component } from "react";
+import React, { Component} from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import News from "./components/News";
+import TopLoader from "react-top-loading-bar";
 
 class App extends Component {
   state = {
-    country: "",
-  };
+    progress: 0
+  }
 
+  setProgress = (prog) => {
+    this.setState({progress: prog});
+  }
   render() {
     return (
       <Router>
         <NavBar />
+        <TopLoader color='red' style={{position: "relative",zIndex: "5",filter: "contrast(150%)",height: "4px"}} progress={this.state.progress} />
 
         <Routes>
-          //* Define unique keys to refresh page & modify data in fetch api
-          <Route exact key="general" path="/" element={<News category="general" />}></Route>
-          <Route exact key="business" path="/business" element={<News category="business" />}></Route>
-          <Route exact key="entertainment" path="/entertainment" element={<News category="entertainment" />}></Route>
-          <Route exact key="health" path="/health" element={<News category="health" />}></Route>
-          <Route exact key="science" path="/science" element={<News category="science" />}></Route>
-          <Route exact key="sports" path="/sports" element={<News category="sports" />}></Route>
-          <Route exact key="technology" path="/technology" element={<News category="technology" />}></Route>
+          {/* //* Define unique keys to refresh page & modify data in fetch api */}
+          <Route exact path="/" element={<News key="general" category="general" setProgress={this.setProgress}/>}></Route>
+          <Route exact path="/business" element={<News key="business" category="business" setProgress={this.setProgress}/>}></Route>
+          <Route exact path="/entertainment" element={<News key="entertainment" category="entertainment" setProgress={this.setProgress}/>}></Route>
+          <Route exact path="/health" element={<News key="health" category="health" setProgress={this.setProgress}/>}></Route>
+          <Route exact path="/science" element={<News key="science" category="science" setProgress={this.setProgress} />}></Route>
+          <Route exact path="/sports" element={<News key="sports" category="sports" setProgress={this.setProgress} />}></Route>
+          <Route exact path="/technology" element={<News key="technology" category="technology" setProgress={this.setProgress} />}></Route>
         </Routes>
       </Router>
     );
