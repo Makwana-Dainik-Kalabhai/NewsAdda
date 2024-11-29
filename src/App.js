@@ -35,7 +35,7 @@ class App extends Component {
           {/* //* Define unique keys to refresh page & modify data in fetch api */}
           <Route
             exact
-            path="/"
+            path="/NewsAdda"
             element={
               <News
                 key="general"
