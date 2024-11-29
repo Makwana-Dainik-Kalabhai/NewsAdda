@@ -14,7 +14,7 @@ class App extends Component {
   };
   render() {
     return (
-      <Router>
+      <Router basename="/NewsAdda">
         <NavBar />
         <TopLoader
           color="red"
