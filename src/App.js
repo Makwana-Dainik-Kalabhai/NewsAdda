@@ -14,7 +14,7 @@ class App extends Component {
   };
   render() {
     return (
-      <Router basename="/NewsAdda">
+      <Router>
         <NavBar />
         <TopLoader
           color="red"
@@ -31,7 +31,7 @@ class App extends Component {
           {/* //* Define unique keys to refresh page & modify data in fetch api */}
           <Route
             exact
-            path="/NewsAdda"
+            path="/"
             element={
               <News
                 key="general"
