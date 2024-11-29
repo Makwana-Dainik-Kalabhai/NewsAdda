@@ -18,7 +18,7 @@ class App extends Component {
   };
   render() {
     return (
-      <Router basename="/NewsAdda/">
+      <Router basename="/">
         <NavBar />
         <TopLoader
           color="red"
@@ -35,7 +35,7 @@ class App extends Component {
           {/* //* Define unique keys to refresh page & modify data in fetch api */}
           <Route
             exact
-            path="/NewsAdda/"
+            path="/"
             element={
               <News
                 key="general"
@@ -46,7 +46,7 @@ class App extends Component {
           ></Route>
           <Route
             exact
-            path="/NewsAdda/business"
+            path="/business"
             element={
               <News
                 key="business"
@@ -57,7 +57,7 @@ class App extends Component {
           ></Route>
           <Route
             exact
-            path="/NewsAdda/entertainment"
+            path="/entertainment"
             element={
               <News
                 key="entertainment"
@@ -68,7 +68,7 @@ class App extends Component {
           ></Route>
           <Route
             exact
-            path="/NewsAdda/health"
+            path="/health"
             element={
               <News
                 key="health"
@@ -79,7 +79,7 @@ class App extends Component {
           ></Route>
           <Route
             exact
-            path="/NewsAdda/science"
+            path="/science"
             element={
               <News
                 key="science"
@@ -90,7 +90,7 @@ class App extends Component {
           ></Route>
           <Route
             exact
-            path="/NewsAdda/sports"
+            path="/sports"
             element={
               <News
                 key="sports"
@@ -101,7 +101,7 @@ class App extends Component {
           ></Route>
           <Route
             exact
-            path="/NewsAdda/technology"
+            path="/technology"
             element={
               <News
                 key="technology"
