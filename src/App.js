@@ -1,9 +1,5 @@
 import React, { Component } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import News from "./components/News";
 import TopLoader from "react-top-loading-bar";
@@ -18,7 +14,7 @@ class App extends Component {
   };
   render() {
     return (
-      <Router basename="/NewsAdda">
+      <BrowserRouter basename="/NewsAdda">
         <NavBar />
         <TopLoader
           color="red"
@@ -105,7 +101,7 @@ class App extends Component {
             }
           ></Route>
         </Routes>
-      </Router>
+      </BrowserRouter>
     );
   }
 }
