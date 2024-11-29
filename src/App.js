@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import News from "./components/News";
 import TopLoader from "react-top-loading-bar";
@@ -14,7 +14,7 @@ class App extends Component {
   };
   render() {
     return (
-      <BrowserRouter basename="/NewsAdda">
+      <Router>
         <NavBar />
         <TopLoader
           color="red"
@@ -31,7 +31,7 @@ class App extends Component {
           {/* //* Define unique keys to refresh page & modify data in fetch api */}
           <Route
             exact
-            path="/NewsAdda"
+            path="/"
             element={
               <News
                 key="general"
@@ -41,6 +41,7 @@ class App extends Component {
             }
           ></Route>
           <Route
+            exact
             path="/business"
             element={
               <News
@@ -51,6 +52,7 @@ class App extends Component {
             }
           ></Route>
           <Route
+            exact
             path="/entertainment"
             element={
               <News
@@ -61,6 +63,7 @@ class App extends Component {
             }
           ></Route>
           <Route
+            exact
             path="/health"
             element={
               <News
@@ -71,6 +74,7 @@ class App extends Component {
             }
           ></Route>
           <Route
+            exact
             path="/science"
             element={
               <News
@@ -81,6 +85,7 @@ class App extends Component {
             }
           ></Route>
           <Route
+            exact
             path="/sports"
             element={
               <News
@@ -91,6 +96,7 @@ class App extends Component {
             }
           ></Route>
           <Route
+            exact
             path="/technology"
             element={
               <News
@@ -101,7 +107,7 @@ class App extends Component {
             }
           ></Route>
         </Routes>
-      </BrowserRouter>
+      </Router>
     );
   }
 }
