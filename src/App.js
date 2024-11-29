@@ -45,7 +45,7 @@ class App extends Component {
             }
           ></Route>
           <Route
-            path="/NewsAdda/business"
+            path="/business"
             element={
               <News
                 key="business"
@@ -55,7 +55,7 @@ class App extends Component {
             }
           ></Route>
           <Route
-            path="/NewsAdda/entertainment"
+            path="/entertainment"
             element={
               <News
                 key="entertainment"
@@ -65,7 +65,7 @@ class App extends Component {
             }
           ></Route>
           <Route
-            path="/NewsAdda/health"
+            path="/health"
             element={
               <News
                 key="health"
@@ -75,7 +75,7 @@ class App extends Component {
             }
           ></Route>
           <Route
-            path="/NewsAdda/science"
+            path="/science"
             element={
               <News
                 key="science"
@@ -85,7 +85,7 @@ class App extends Component {
             }
           ></Route>
           <Route
-            path="/NewsAdda/sports"
+            path="/sports"
             element={
               <News
                 key="sports"
@@ -95,7 +95,7 @@ class App extends Component {
             }
           ></Route>
           <Route
-            path="/NewsAdda/technology"
+            path="/technology"
             element={
               <News
                 key="technology"
