@@ -41,6 +41,7 @@ class App extends Component {
             }
           ></Route>
           <Route
+            exact
             path="/business"
             element={
               <News
@@ -51,6 +52,7 @@ class App extends Component {
             }
           ></Route>
           <Route
+            exact
             path="/entertainment"
             element={
               <News
@@ -61,6 +63,7 @@ class App extends Component {
             }
           ></Route>
           <Route
+            exact
             path="/health"
             element={
               <News
@@ -71,6 +74,7 @@ class App extends Component {
             }
           ></Route>
           <Route
+            exact
             path="/science"
             element={
               <News
@@ -81,6 +85,7 @@ class App extends Component {
             }
           ></Route>
           <Route
+            exact
             path="/sports"
             element={
               <News
@@ -91,6 +96,7 @@ class App extends Component {
             }
           ></Route>
           <Route
+            exact
             path="/technology"
             element={
               <News
