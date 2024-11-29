@@ -31,7 +31,7 @@ class App extends Component {
           {/* //* Define unique keys to refresh page & modify data in fetch api */}
           <Route
             exact
-            path="/"
+            path="/NewsAdda"
             element={
               <News
                 key="general"
@@ -41,7 +41,6 @@ class App extends Component {
             }
           ></Route>
           <Route
-            exact
             path="/business"
             element={
               <News
@@ -52,7 +51,6 @@ class App extends Component {
             }
           ></Route>
           <Route
-            exact
             path="/entertainment"
             element={
               <News
@@ -63,7 +61,6 @@ class App extends Component {
             }
           ></Route>
           <Route
-            exact
             path="/health"
             element={
               <News
@@ -74,7 +71,6 @@ class App extends Component {
             }
           ></Route>
           <Route
-            exact
             path="/science"
             element={
               <News
@@ -85,7 +81,6 @@ class App extends Component {
             }
           ></Route>
           <Route
-            exact
             path="/sports"
             element={
               <News
@@ -96,7 +91,6 @@ class App extends Component {
             }
           ></Route>
           <Route
-            exact
             path="/technology"
             element={
               <News

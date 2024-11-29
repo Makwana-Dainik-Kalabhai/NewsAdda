@@ -33,7 +33,7 @@ export default class NavBar extends Component {
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link className={`nav-link ${this.state.navLink==="home"?"active":""}`} aria-current="page" to="/" onClick={()=>{this.setState({navLink:"home"})}}>
+                  <Link className={`nav-link ${this.state.navLink==="home"?"active":""}`} aria-current="page" to="/NewsAdda" onClick={()=>{this.setState({navLink:"home"})}}>
                     Home
                   </Link>
                 </li>
