@@ -7,7 +7,7 @@ export default class News extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      apiKey: process.env.NEWS_API_KEY,
+      apiKey: process.env.NEWS_API_KEY || import.meta.env.NEWS_API_KEY,
       articles: [],
       page: 1,
       totalResults: 0,
