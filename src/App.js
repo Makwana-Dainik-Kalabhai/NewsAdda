@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import NavBar from "./components/NavBar";
-import News from "./components/News";
+import NavBar from "./components/NavBar.jsx";
+import News from "./components/News.jsx";
 import TopLoader from "react-top-loading-bar";
 
 class App extends Component {
