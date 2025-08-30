@@ -2,6 +2,26 @@
   "name": "news-adda",
   "version": "0.1.0",
   "private": true,
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "homepage": "https://github.com/Makwana-Dainik-Kalabhai/NewsAdda#readme",
+  "bugs": {
+    "url": "https://github.com/Makwana-Dainik-Kalabhai/NewsAdda/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Makwana-Dainik-Kalabhai/NewsAdda.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "predeploy": "npm run build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -14,12 +34,12 @@
     "react-top-loading-bar": "^2.3.1",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
-    "predeploy": "npm run build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "react-router-dom": "^6.27.0",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
   },
   "eslintConfig": {
     "extends": [
@@ -38,16 +58,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "react-router-dom": "^6.27.0",
-    "@types/bun": "latest"
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
-  "author": "",
-  "license": "ISC",
-  "peerDependencies": {
-    "typescript": "^5"
   }
 }
