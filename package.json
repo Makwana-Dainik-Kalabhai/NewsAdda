@@ -30,13 +30,13 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-infinite-scroll-component": "^6.1.0",
-    "react-scripts": "^0.0.0",
     "react-top-loading-bar": "^2.3.1",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
     "@types/bun": "latest",
-    "react-router-dom": "^6.27.0"
+    "react-router-dom": "^6.27.0",
+    "react-scripts": "^5.0.1"
   },
   "peerDependencies": {
     "typescript": "^4.9.5"
