@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import News from "./components/News";
@@ -12,6 +12,7 @@ class App extends Component {
   setProgress = (prog) => {
     this.setState({ progress: prog });
   };
+
   render() {
     return (
       <Router>

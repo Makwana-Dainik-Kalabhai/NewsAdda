@@ -1,11 +1,8 @@
 import React, { Component } from "react";
-import {Link} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Img from "./logo.png";
 
 export default class NavBar extends Component {
-  state = {
-    navLink: "home"
-  }
   render() {
     return (
       <>
@@ -33,39 +30,39 @@ export default class NavBar extends Component {
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link className={`nav-link ${this.state.navLink==="home"?"active":""}`} aria-current="page" to="/" onClick={()=>{this.setState({navLink:"home"})}}>
+                  <NavLink className="nav-link" to="/">
                     Home
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className={`nav-link ${this.state.navLink==="business"?"active":""}`} aria-current="page" to="/business" onClick={()=>{this.setState({navLink:"business"})}}>
+                  <NavLink className="nav-link" to="/business">
                     Business
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className={`nav-link ${this.state.navLink==="entertainment"?"active":""}`} aria-current="page" to="/entertainment" onClick={()=>{this.setState({navLink:"entertainment"})}}>
+                  <NavLink className="nav-link" to="/entertainment">
                     Entertainment
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className={`nav-link ${this.state.navLink==="health"?"active":""}`} aria-current="page" to="/health" onClick={()=>{this.setState({navLink:"health"})}}>
+                  <NavLink className="nav-link" to="/health">
                     Health
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className={`nav-link ${this.state.navLink==="science"?"active":""}`} aria-current="page" to="/science" onClick={()=>{this.setState({navLink:"science"})}}>
+                  <NavLink className="nav-link" to="/science">
                     Science
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className={`nav-link ${this.state.navLink==="sports"?"active":""}`} aria-current="page" to="/sports" onClick={()=>{this.setState({navLink:"sports"})}}>
+                  <NavLink className="nav-link" to="/sports">
                     Sports
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className={`nav-link ${this.state.navLink==="technology"?"active":""}`} aria-current="page" to="/technology" onClick={()=>{this.setState({navLink:"technology"})}}>
+                  <NavLink className="nav-link" to="/technology">
                     Technology
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </div>

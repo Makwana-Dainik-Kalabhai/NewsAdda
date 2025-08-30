@@ -7,7 +7,7 @@ export default class News extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      apiKey: process.env.myApiKey,
+      apiKey: process.env.NEWS_API_KEY,
       articles: [],
       page: 1,
       totalResults: 0,
@@ -22,8 +22,9 @@ export default class News extends Component {
 
   fetchApi = async () => {
     this.props.setProgress(10);
-    const api = await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=63d9e062e0e64107a6e71ff0f6456a75&page=${this.state.page}&pageSize=9`);
+    const api = await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=63d9e062e0e64107a6e71ff0f6456a75&page=${this.state.page}&pageSize=10`);
     const data = await api.json();
+
     this.props.setProgress(100);
     this.setState({ articles: data.articles, totalResults: data.totalResults });
   }
@@ -33,8 +34,10 @@ export default class News extends Component {
   }
 
   fetchMoreData = async () => {
+    let pageSize = ((this.state.totalResults - this.state.articles.length) >= 10) ? 10 : ((this.state.totalResults - this.state.articles.length) + 1);
+
     const api = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=63d9e062e0e64107a6e71ff0f6456a75&page=${this.state.page + 1}&pageSize=9`
+      `https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=63d9e062e0e64107a6e71ff0f6456a75&page=${this.state.page + 1}&pageSize=${pageSize}`
     );
     this.setState({ page: this.state.page + 1 });
     const data = await api.json();
@@ -45,20 +48,20 @@ export default class News extends Component {
     return (
       <div>
         <h1 className="text-center mt-5 mb-2">NewsAdda - Top Headlines with {this.capitalize(this.props.category)}</h1>
-        <InfiniteScroll
+        {this.state.articles && <InfiniteScroll
           dataLength={this.state.articles.length}
+          hasMore={(this.state.totalResults - this.state.articles.length) !== 0}
           next={this.fetchMoreData}
-          hasMore={this.state.articles.length !== this.state.totalResults}
           loader={<Loader />}
         >
           <div className="container">
             <div className="row my-3">
-              {this.state.articles && this.state.articles.map((e) => {
+              {this.state.articles.map((e, i) => {
                 return (
                   e.urlToImage && (
-                    <div className="col-md-4 my-4" key={e.publishedAt}>
+                    <div className="col-md-4 my-4" key={i}>
                       <NewsItem
-                        urlToImage={e.urlToImage!==null?e.urlToImage:""}
+                        urlToImage={e.urlToImage !== null ? e.urlToImage : ""}
                         title={e.title}
                         desciption={e.description}
                         url={e.url}
@@ -69,9 +72,9 @@ export default class News extends Component {
                   )
                 );
               })}
-            </div >
+            </div>
           </div>
-        </InfiniteScroll>
+        </InfiniteScroll>}
       </div>
     );
   }

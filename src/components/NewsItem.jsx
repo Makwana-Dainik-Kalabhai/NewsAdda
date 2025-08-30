@@ -17,8 +17,8 @@ export default class NewsItem extends Component {
                 ? desciption.slice(0, 150) + "..."
                 : desciption):""}
             </p>
-            <p class="card-text mt-0"><small class="text-body-dark"><b>{(author!==null)?`- ${author}`:""}</b></small></p>
-            <small class="text-body-secondary" style={{ position: "absolute", right: "15px", bottom: "15px" }}>{new Date(publishedAt).toDateString()}</small>
+            <p className="card-text mt-0"><small className="text-body-dark"><b>{(author!==null)?`- ${author}`:""}</b></small></p>
+            <small className="text-body-secondary" style={{ position: "absolute", right: "15px", bottom: "15px" }}>{new Date(publishedAt).toDateString()}</small>
             <a
               href={url}
               className="btn btn-dark position-absolute py-1"
